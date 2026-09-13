@@ -59,7 +59,7 @@ Additional CSS targets Extended Pandoc Markdown superscripts and subscripts, Nov
 
 ## Markdown Showcase
 
-1. Download [the showcase](docs\theme-showcase.md) and open it in your vault with the theme enabled.
+1. Download [the showcase](docs/theme-showcase.md) and open it in your vault with the theme enabled.
 2. Enable Mint Noir for the rendered typography, quote, tasks, table, code, and callout.
 3. View the showcase in light and dark mode, keeping the dark snippet enabled.
 4. Switch to **Live Preview** for an editing screenshot, or open the file drawer to show nested folders alongside the note.
@@ -78,7 +78,7 @@ Mobile is the design priority. Desktop selectors are included, but the project d
 
 ### 1. Get the files
 
-Download or copy [theme.css](theme.css) and [manifest.json](manifest.json). For dark mode, also get [dark.css](snippets\dark.css). On GitHub, download the raw files or download and extract the repository ZIP; do not save the HTML file-preview page as a stylesheet.
+Download or copy [theme.css](theme.css) and [manifest.json](manifest.json). For dark mode, also get [dark.css](snippets/dark.css). On GitHub, download the raw files or download and extract the repository ZIP; do not save the HTML file-preview page as a stylesheet.
 
 ### 2. Install the theme
 
@@ -173,8 +173,9 @@ Disable the `dark.css` snippet when switching away from Mint Noir. Snippets rema
 ## Project Files
 
 - [theme.css](theme.css) — main theme, embedded font, light palette, shared interface styling, and mobile adjustments.
-- [dark.css](snippets\dark.css) — companion dark-mode snippet, installed separately.
+- [dark.css](snippets/dark.css) — companion dark-mode snippet, installed separately.
 - [manifest.json](manifest.json) — theme name, version, minimum app version, and author metadata.
+- [theme-showcase.md](docs/theme-showcase.md)  — a ready-to-view theme showcase of the theme you can download to your vault.
 - [README.md](README.md) — installation guide, feature reference, and Markdown screenshot sample.
 
 ## Project Status and Feedback
