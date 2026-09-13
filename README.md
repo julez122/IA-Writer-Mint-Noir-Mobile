@@ -1,5 +1,7 @@
 # IA Writer Mint Noir Mobile
 
+### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/blob/37c32f0b26b547a9de9309f0b787398f2b6a6d61/snippets/dark.css) for the dark theme snippet.
+
 ![Desktop](screenshot_desktop.png)
 
 ![Mobile](screenshot.png)
