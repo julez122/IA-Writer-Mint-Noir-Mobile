@@ -1,5 +1,9 @@
 # IA Writer Mint Noir Mobile
 
+<p align="center">
+<a href="https://ibb.co/mVcWxJTK"><img src="https://i.ibb.co/JwsJhntT/screenshot.png" alt="screenshot" border="0" width="70%" height="70%"></a>
+</p>
+
 *Soft mint pages, deep teal details, and iA Writer Duospace.*
 
 **Mobile first · Light and dark · Version 1.0.0 · By Julia**
@@ -22,7 +26,6 @@ Mint Noir is a finished personal project. No further design changes are currentl
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
 - [Project Files](#project-files)
@@ -140,10 +143,6 @@ To update a manual installation, replace `theme.css` and `manifest.json` in the 
 
 To stop using Mint Noir, select another theme and **disable the dark snippet**. If desired, remove only the `IA Writer Mint Noir Mobile` theme folder and its `dark.css` snippet. Your notes and attachments remain in the vault.
 
-## Screenshots
-
-<!-- Add real screenshots here when available, using relative Markdown image paths and descriptive alt text. -->
-
 ## Customization
 
 Mint Noir is a fixed personal design. It has no settings panel, and some font sizes and colors deliberately override Obsidian's appearance preferences.
@@ -194,4 +193,4 @@ Mint Noir is an independent personal theme and is not an official Obsidian or iA
 
 ## License
 
-A license for the theme's original CSS has not yet been selected. The embedded font is third-party material with its own licensing, separate from the theme.
+[GNU General Public License v3.0](LICENSE)
