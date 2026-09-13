@@ -1,6 +1,8 @@
 # IA Writer Mint Noir Mobile
 
-![Screenshot](screenshot.png)
+![Desktop](screenshot_desktop.png)
+
+![Mobile](screenshot.png)
 
 *Soft mint pages, deep teal details, and iA Writer Duospace.*
 
