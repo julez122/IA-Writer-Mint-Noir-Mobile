@@ -1,0 +1,630 @@
+ /* --------------------------------------------------
+   MINT NOIR DARK MODE 
+   (Snippet Version cause in theme.css it crashes it)
+   IMPORTANT: Start every selector with .theme-dark
+   or else it overrides light theme!!
+   ----------------------------------------------------*/
+   
+   /* -------------------------------------
+   DARK THEME VARS
+   ---------------------------------------*/
+   
+.theme-dark {
+  /* true palette inversion */
+  --mint-base: color-mix(in srgb, #0e4657 84%, black 16%);
+  --mint-base-darker: color-mix(in srgb, #0e4657 90%, black 10%);
+  --deep-teal: #90d1c7;
+  --deep-teal-soft: color-mix(in srgb, var(--deep-teal) 12%, var(--mint-base) 88%);
+  --deep-teal-soft-strong: color-mix(in srgb, var(--deep-teal) 18%, var(--mint-base) 82%);
+
+  /* text */
+  --text-black: #ffffff;
+  --text-normal: #ffffff;
+  --text-muted: color-mix(in srgb, white 60%, var(--deep-teal) 40%);
+  --text-faint: color-mix(in srgb, white 40%, var(--deep-teal) 60%);
+  --text-on-accent: #ffffff;
+
+  /* main backgrounds */
+  --background-primary: var(--mint-base);
+  --background-primary-alt: color-mix(in srgb, var(--mint-base) 92%, white 8%);
+  --background-secondary: color-mix(in srgb, var(--mint-base) 88%, white 12%);
+  --background-secondary-alt: color-mix(in srgb, var(--mint-base) 84%, white 16%);
+  --background-modifier-border: color-mix(in srgb, var(--deep-teal) 22%, var(--mint-base) 78%);
+  --background-modifier-hover: rgba(144, 209, 199, 0.10);
+  --background-modifier-active-hover: rgba(144, 209, 199, 0.16);
+  --background-modifier-form-field: var(--mint-base-darker);
+  --background-modifier-form-field-highlighted: rgba(144, 209, 199, 0.18);
+  
+  /* accent system */
+  --accent-h: 171 !important;
+  --accent-s: 43% !important;
+  --accent-l: 69% !important;
+  --color-accent: var(--deep-teal) !important;
+  --color-accent-hsl: 171, 43%, 69% !important;
+  --interactive-accent: var(--deep-teal-soft) !important;
+  --interactive-accent-hover: color-mix(in srgb, var(--deep-teal-soft) 86%, white 14%) !important;
+  --interactive-normal: var(--deep-teal-soft);
+  --text-accent: var(--deep-teal) !important;
+  --text-accent-hover: color-mix(in srgb, var(--deep-teal) 86%, white 14%) !important;
+
+  /* headers / accents / code / icons */
+  --text-title-h1: var(--deep-teal);
+  --text-title-h2: var(--deep-teal);
+  --text-title-h3: var(--deep-teal);
+  --text-title-h4: var(--deep-teal);
+  --text-title-h5: var(--deep-teal);
+  --text-title-h6: var(--deep-teal);
+  --blockquote-background-color: var(--deep-teal-soft);
+  --blockquote-border-color: var(--deep-teal);
+  --code-normal: var(--text-normal);
+  --code-background: var(--mint-base-darker);
+  --code-comment: color-mix(in srgb, white 62%, var(--mint-base) 38%);
+  --code-keyword: var(--deep-teal);
+  --code-function: color-mix(in srgb, var(--deep-teal) 86%, white 14%);
+  --code-string: color-mix(in srgb, white 88%, var(--mint-base) 12%);
+  --icon-color: var(--deep-teal);
+  --icon-color-hover: color-mix(in srgb, var(--deep-teal) 86%, white 14%);
+  --icon-color-active: var(--deep-teal);
+  --icon-color-focused: var(--deep-teal);
+  --list-marker-color: var(--deep-teal);
+  --list-marker-color-collapsed: var(--deep-teal);
+  --list-number-color: var(--deep-teal);
+
+  /* metadata */
+  --metadata-property-background: transparent;
+  --metadata-property-background-hover: rgba(144, 209, 199, 0.08);
+  --metadata-label-text-color: var(--text-normal);
+  --metadata-input-text-color: var(--text-normal);
+
+  /* misc */
+  --interactive-success: #7fd9a9;
+  --interactive-active-thumb-bg: #7fd9a9;
+  --scrollbar-bg: color-mix(in srgb, var(--mint-base) 94%, black 6%);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--deep-teal) 58%, var(--mint-base) 42%);
+  --shadow-s: 0 1px 2px rgba(0, 0, 0, 0.28);
+  --shadow-l: 0 8px 24px rgba(0, 0, 0, 0.36);
+  
+  --text-highlight-bg: rgba(144, 209, 199, 0.7);
+  --text-highlight-bg-active: rgba(144, 209, 199, 0.9);
+}
+
+
+.theme-dark .markdown-rendered hr {
+  border: none;
+  border-top: 2px solid var(--mint-base);
+  box-shadow: 0 0 10px rgba(14, 70, 87, 0.18);
+}
+
+
+/* places that were hardcoded bright and need a dark nudge */
+.theme-dark .markdown-source-view.mod-cm6 .HyperMD-codeblock, 
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock, 
+.theme-dark .markdown-source-view.mod-cm6 .cm-preview-code-block, 
+.theme-dark .markdown-source-view.mod-cm6 .cm-preview-code-block *, 
+.theme-dark .cm-s-obsidian .HyperMD-codeblock, 
+.theme-dark .cm-s-obsidian .cm-line.HyperMD-codeblock,
+.theme-dark .cm-inline-code, 
+.theme-dark .markdown-source-view.mod-cm6 .cm-inline-code {
+  background-color: var(--deep-teal-soft) !important;
+}
+
+.theme-dark .copy-code-button,
+.theme-dark .markdown-rendered .copy-code-button,
+.theme-dark button.copy-code-button {
+  background: var(--background-secondary-alt) !important;
+  border: 1px solid color-mix(in srgb, var(--deep-teal) 30%, var(--mint-base) 70%) !important;
+}
+
+.theme-dark .copy-code-button svg,
+.theme-dark button.copy-code-button svg {
+  stroke: var(--deep-teal) !important;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-formatting-quote {
+  color: rgba(144, 209, 199, 0.45) !important;
+}
+
+
+ /* -------------------------------------
+   NAV, FOLDERS, FILES
+   (dont change the structure, cascading!!)
+   ---------------------------------------*/
+
+/* ------ File Tree Text ------ */
+  .theme-dark .tree-item-self {
+    color: #B1F1E1;
+  /* font-family: "iawriterduos-regular"; */
+    font-size: 14px;
+    }
+    
+    /* ----------------
+   NORMAL FILES
+   -------------------*/
+   
+    /* -------- File Tree Items  -------- */
+.theme-dark .tree-item-self.is-clickable {
+    background-color: rgba(164, 219, 211, 0.04);
+    margin-bottom: 2px;
+    border-radius: 8px;
+}
+
+.theme-dark .tree-item-self.is-clickable:active {
+    background-color: rgba(164, 219, 211, 0.08);
+    margin-bottom: 2px;
+    border-radius: 8px;
+}
+
+.theme-dark .tree-item-self.is-clickable:hover{
+    background-color: rgba(164, 219, 211, 0.10) !important;
+}
+
+/* -------- Files in first level folder  -------- */
+.theme-dark .nav-folder .nav-file:not(.theme-dark .nav-folder .nav-folder .nav-file) > .theme-dark .tree-item-self.nav-file-title.is-clickable {
+    background: rgba(14, 70, 87, 0.15) !important;
+}
+
+    /* ---------------
+         FOLDERS 
+   ------------------*/
+
+/* -------- Folders -------- */
+.theme-dark .tree-item-self.nav-folder-title.is-clickable.mod-collapsible {
+    background: rgba(14, 70, 87, 0.25) !important;
+    background-color: rgba(14, 70, 87, 0.25) !important;
+    border-radius: 0;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* -------- Subfolders -------- */
+.theme-dark .nav-folder-children .nav-folder:nth-child(1n) .nav-folder-title,
+.theme-dark .nav-folder-children .nav-folder .nav-folder:nth-child(1n) .nav-folder-title,
+.theme-dark .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(1n) .nav-folder-title,
+.theme-dark .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(1n) .nav-folder-title {
+  border-left: none;
+  background-color: transparent !important;
+  background: linear-gradient(
+    to right,
+    transparent 0 11px,
+    #90d1c7 8px 13px,
+    rgba(14, 70, 87, 0.35) 10px 100%
+  ) !important;
+}
+
+/* -------- Files in Subfolders -------- */
+.theme-dark .nav-folder:not(.mod-root) .nav-folder .nav-file > .tree-item-self.nav-file-title.is-clickable {
+    --dark-subfile-indent: 11px;
+    cursor: var(--cursor);
+    margin-bottom: 2px;
+    border-left: none;
+    background: linear-gradient(
+        to right,
+        transparent 0 var(--dark-subfile-indent),
+        rgba(14, 70, 87, 0.30) var(--dark-subfile-indent) 100%
+    ) !important;
+}
+
+/* -------- Subfolders of Subfolders -------- */
+.theme-dark .nav-folder:not(.mod-root) .nav-folder .nav-folder > .tree-item-self.nav-folder-title.is-clickable {
+  --dark-subsubfolder-indent: 30px;
+  --dark-subsubfolder-line-start: 28px;
+  border-left: none;
+  background: linear-gradient(
+    to right,
+    transparent 0 var(--dark-subsubfolder-line-start),
+    #6bc1b4 var(--dark-subsubfolder-line-start) var(--dark-subsubfolder-indent),
+    rgba(14, 70, 87, 0.60) var(--dark-subsubfolder-indent) 100%
+  ) !important;
+}
+
+/* -------- Files in Subfolders of Subfolders -------- */
+.theme-dark .nav-folder:not(.mod-root) .nav-folder .nav-folder .nav-file > .tree-item-self.nav-file-title.is-clickable {
+    --dark-subfile-indent: 30px;
+    cursor: var(--cursor);
+    margin-bottom: 2px;
+    border-left: none;
+    background: linear-gradient(
+        to right,
+        transparent 0 var(--dark-subfile-indent),
+        rgba(14, 70, 87, 0.50) var(--dark-subfile-indent) 100%
+    ) !important;
+}
+
+/* -----------
+    FILE TAG
+   ------------*/
+   
+/* -------- File Tag (BASE, CANVAS, ...) -------- */
+.theme-dark .nav-file-tag {
+  color: rgba(164, 219, 211, 0.50);
+}
+
+
+/* -------------------------------------
+   TOGGLES
+   ---------------------------------------*/
+
+/* Toggle Background enabled */
+.theme-dark .checkbox-container.is-enabled {
+    background-color: var(--interactive-accent) !important;
+}
+  /* Toggle Button when enabled */
+.theme-dark .checkbox-container.is-enabled:after {
+    background-color: var( --deep-teal);
+}
+
+/* Toggle Background not enabled */
+.theme-dark .checkbox-container {
+background-color: var(--deep-teal);
+}
+
+/* Toggle Button when not enabled  */
+.theme-dark .checkbox-container:after {
+    background-color:  #B1F1E1;
+}
+
+
+/* -------------------------------------
+   INDENT
+   ---------------------------------------*/
+
+/* --- Indent Lines File Tree --- */
+.theme-dark .tree-item-children {
+    padding-inline-start: var(--nav-item-children-padding-start, var(--nav-item-children-padding-left));
+    margin-inline-start: var(--nav-item-children-margin-start, var(--nav-item-children-margin-left));
+    border-inline-start: var(--nav-indentation-guide-width) solid #12646b;
+    border-inline-width: 1.5px;
+}
+
+/* ------- Indent Lines Notes ------ */
+.theme-dark .markdown-source-view.mod-cm6 .cm-indent::before,
+.theme-dark .markdown-rendered.show-indentation-guide li > ul::before, .markdown-rendered.show-indentation-guide li > ol::before {
+    border-inline-end: solid var(--deep-teal)!important;
+    border-inline-width: 1.5px !important;
+}
+
+
+/* -------------------------------------
+   FONT FORMAT
+   ---------------------------------------*/
+
+.theme-dark .cm-strong,
+.theme-dark b,
+.theme-dark strong,
+.theme-dark .cm-em,
+.theme-dark i,
+.theme-dark em,
+.theme-dark del,
+.theme-dark .cm-strikethrough {
+  color: var(--deep-teal);
+}
+
+
+/* ----------------------------------------
+   TABLES
+   ---------------------------------------- */
+
+    /* --------------------------
+   READING VIEW TABLES
+   -----------------------------*/
+.theme-dark .markdown-rendered table,
+.theme-dark .markdown-preview-view table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1em 0 1.4em 0;
+  border: 1px solid color-mix(in srgb, var(--deep-teal) 22%, var(--mint-base) 78%);
+  border-radius: 16px;
+  overflow: visible;
+  background: color-mix(in srgb, var(--mint-base) 94%, black 6%);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+}
+
+/* Header row */
+.theme-dark .markdown-rendered table thead,
+.theme-dark .markdown-preview-view table thead,
+.theme-dark .markdown-rendered table thead tr,
+.theme-dark .markdown-preview-view table thead tr {
+  background: color-mix(in srgb, var(--deep-teal) 5%, var(--mint-base) 95%) !important;
+}
+
+.theme-dark .markdown-rendered table th,
+.theme-dark .markdown-preview-view table th {
+  color: var(--deep-teal);
+  background: color-mix(in srgb, var(--deep-teal) 5%, var(--mint-base) 95%) !important;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid color-mix(in srgb, var(--deep-teal) 28%, var(--mint-base) 72%);
+  border-right: 1px solid color-mix(in srgb, var(--deep-teal) 18%, var(--mint-base) 82%);
+  padding: 0.65em 0.85em;
+}
+
+/* Table cells */
+.theme-dark .markdown-rendered table td,
+.theme-dark .markdown-preview-view table td {
+  color: var(--text-normal);
+  background: transparent;
+  border-bottom: 1px solid color-mix(in srgb, var(--deep-teal) 18%, var(--mint-base) 82%);
+  border-right: 1px solid color-mix(in srgb, var(--deep-teal) 14%, var(--mint-base) 86%);
+  padding: 0.65em 0.85em;
+}
+
+/* Zebra striping */
+.theme-dark .markdown-rendered table tbody tr:nth-child(even) td,
+.theme-dark .markdown-preview-view table tbody tr:nth-child(even) td {
+  background: rgba(144, 209, 199, 0.035);
+}
+
+/* Hover row */
+.theme-dark .markdown-rendered table tbody tr:hover td,
+.theme-dark .markdown-preview-view table tbody tr:hover td {
+  background: rgba(144, 209, 199, 0.10);
+}
+
+/* Clean outer edges */
+.theme-dark .markdown-rendered table th:last-child,
+.theme-dark .markdown-rendered table td:last-child,
+.theme-dark .markdown-preview-view table th:last-child,
+.theme-dark .markdown-preview-view table td:last-child {
+  border-right: none;
+}
+
+.theme-dark .markdown-rendered table tbody tr:last-child td,
+.theme-dark .markdown-preview-view table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* -------------------------
+   LIVE PREVIEW TABLES
+   ---------------------------*/
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid color-mix(in srgb, var(--deep-teal) 22%, var(--mint-base) 78%);
+  border-radius: 16px;
+  overflow: visible;
+  background: color-mix(in srgb, var(--mint-base) 94%, black 6%);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget th {
+  color: var(--deep-teal);
+  background: color-mix(in srgb, var(--deep-teal) 5%, var(--mint-base) 95%) !important;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid color-mix(in srgb, var(--deep-teal) 28%, var(--mint-base) 72%);
+  border-right: 1px solid color-mix(in srgb, var(--deep-teal) 18%, var(--mint-base) 82%);
+  padding: 0.65em 0.85em;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget td {
+  color: var(--text-normal);
+  background: transparent;
+  border-bottom: 1px solid color-mix(in srgb, var(--deep-teal) 18%, var(--mint-base) 82%);
+  border-right: 1px solid color-mix(in srgb, var(--deep-teal) 14%, var(--mint-base) 86%);
+  padding: 0.65em 0.85em;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget tr:nth-child(even) td {
+  background: rgba(144, 209, 199, 0.05);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget tr:hover td {
+  background: rgba(144, 209, 199, 0.10);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget th:last-child,
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget td:last-child {
+  border-right: none;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget tr:last-child td {
+  border-bottom: none;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget table {
+  border-radius: 16px !important;
+  overflow: visible !important;
+}
+
+/* Top row rounding */
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget thead tr:first-child th:first-child {
+  border-top-left-radius: 16px !important;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget thead tr:first-child th:last-child {
+  border-top-right-radius: 16px !important;
+}
+
+/* Bottom row rounding */
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 16px !important;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px !important;
+}
+
+/* ----------------------------------------
+   LINKS
+   ---------------------------------------- */
+   
+/* -------------------------
+   READING VIEW LINKS
+   --------------------------*/
+.theme-dark a,
+.theme-dark .internal-link,
+.theme-dark .external-link,
+.theme-dark .markdown-rendered a,
+.theme-dark .markdown-rendered .internal-link,
+.theme-dark .markdown-rendered .external-link {
+  color: #66ffe0;
+}
+
+.theme-dark a:hover,
+.theme-dark .internal-link:hover,
+.theme-dark .external-link:hover,
+.theme-dark .markdown-rendered a:hover,
+.theme-dark .markdown-rendered .internal-link:hover,
+.theme-dark .markdown-rendered .external-link:hover {
+  color: #33ffd6 !important;
+}
+
+.theme-dark a:active,
+.theme-dark .internal-link:active,
+.theme-dark .external-link:active,
+.theme-dark .markdown-rendered a:active,
+.theme-dark .markdown-rendered .internal-link:active,
+.theme-dark .markdown-rendered .external-link:active {
+  color: #33ffd6 !important;
+}
+
+/* ------------------------
+   LIVE PREVIEW LINKS
+   -------------------------*/
+   
+.theme-dark .markdown-source-view.mod-cm6 .cm-link .cm-underline,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url .cm-underline {
+  color: #66ffe0;
+  font-weight: bold;
+  text-decoration-line: var(--link-external-decoration);
+}
+
+.theme-dark .cm-link,
+.theme-dark .cm-url,
+.theme-dark .cm-string.cm-url,
+.theme-dark .markdown-source-view.mod-cm6 .cm-link,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url {
+  color: #66ffe0;
+  font-weight: bold;
+}
+
+.theme-dark .cm-link:hover,
+.theme-dark .cm-url:hover,
+.theme-dark .cm-string.cm-url:hover,
+.theme-dark .markdown-source-view.mod-cm6 .cm-link:hover,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url:hover {
+  color: #33ffd6;
+}
+
+.theme-dark .cm-link:active,
+.theme-dark .cm-url:active,
+.theme-dark .cm-string.cm-url:active,
+.theme-dark .markdown-source-view.mod-cm6 .cm-link:active,
+.theme-dark .markdown-source-view.mod-cm6 .cm-url:active {
+  color: #33ffd6;
+}
+
+@media (hover: hover) {
+  .theme-dark .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
+  .theme-dark .markdown-source-view.mod-cm6 .cm-url .cm-underline:hover {
+    color: #33ffd6 !important;
+    text-decoration-line: var(--link-external-decoration-hover);
+  }
+}
+
+/* --------------------
+   INTERNAL LINKS
+   ---------------------*/
+.theme-dark .cm-s-obsidian span.cm-hmd-internal-link,
+.theme-dark .cm-s-obsidian span.cm-formatting-link {
+  color: #66ffe0;
+  font-weight: bold;
+}
+
+.theme-dark .cm-s-obsidian span.cm-hmd-internal-link:hover {
+  color: color-mix(in srgb, var(--deep-teal) 80%, white 20%) !important;
+  font-weight: bold;
+}
+
+.theme-dark .cm-s-obsidian span.cm-hmd-internal-link:active {
+  color: #33ffd6;
+  font-weight: bold;
+}
+
+/* -------------------------------------
+   GRADIENT SCROLLBAR
+   ---------------------------------------*/
+
+body.theme-dark.is-mobile {
+  --scrollbar-width: 5px;
+  --scrollbar-height: 4px;
+}
+
+body.theme-dark.is-mobile ::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+body.theme-dark.is-mobile ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body.theme-dark.is-mobile ::-webkit-scrollbar-thumb {
+  background: #54b3a4;
+  background: radial-gradient(circle, rgba(84, 179, 164, 1) 0%, rgba(83, 166, 149, 1) 50%, rgba(21, 133, 121, 0.7) 100%);
+  border-radius: 999px;
+}
+
+body.theme-dark.is-mobile ::-webkit-scrollbar-thumb:hover {
+  background: #54b3a4;
+  background: linear-gradient(0deg, #54b3a4 0%, rgba(83, 166, 149, 1) 50%, rgba(21, 133, 121, 0.7) 100%);
+  border-radius: 999px;
+}
+
+
+/* ----------------------------------------
+   TABLE HANDLE FIX
+   DO NOT TOUCH UNLESS YOU 
+   WANT TO SUFFER
+---------------------------------------- */
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget,
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper,
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .table-editor {
+  --table-drag-handle-background: transparent !important;
+  --table-drag-handle-background-active: rgba(90, 219, 199, 0.35) !important;
+  --table-drag-handle-color: rgba(151, 226, 213, 0.55) !important;
+  --table-drag-handle-color-active: #d9fff8 !important;
+}
+
+/* Visible active mobile handle, not necessarily pressed */
+/*  .theme-dark.is-mobile .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-row-handle > .table-row-drag-handle,
+.theme-dark.is-mobile .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-col-handle > .table-col-drag-handle,
+.is-mobile .theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-row-handle > .table-row-drag-handle,
+.is-mobile .theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-col-handle > .table-col-drag-handle {
+  background-color: rgba(90, 219, 199, 0.10) !important;
+  color: rgba(151, 226, 213, 0.70) !important;
+} */
+
+/* Pressed / dragging handle */
+.theme-dark.is-mobile .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-row-handle > .table-row-drag-handle:active,
+.theme-dark.is-mobile .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-col-handle > .table-col-drag-handle:active,
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle:active,
+.theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .table-col-drag-handle:active,
+.is-mobile .theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-row-handle > .table-row-drag-handle:active,
+.is-mobile .theme-dark .markdown-source-view.mod-cm6 .cm-table-widget .mod-active-col-handle > .table-col-drag-handle:active {
+  background-color: var(--deep-teal) !important;
+  color: #062d34 !important;
+  box-shadow: 0 0 0 var(--table-selection-border-width) rgba(198, 255, 246, 0.85) !important;
+}
+
+.theme-dark .bases-cards-cover {
+  box-shadow:
+    inset 0 0 24px rgba(0, 15, 18, 0.52),
+    inset 0 -12px 24px rgba(0, 10, 12, 0.42);
+
+  border-bottom: 2px solid rgba(100, 255, 230, 0.16);
+}
+
+.theme-dark .bases-cards-cover::before {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(110, 255, 225, 0.22), transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(0, 40, 48, 0.45), transparent 42%),
+    linear-gradient(180deg, #315f61 0%, #16363a 100%);
+}
+
+.theme-dark .cm-hashtag-inner{
+  color: var(--text-accent);
+}
