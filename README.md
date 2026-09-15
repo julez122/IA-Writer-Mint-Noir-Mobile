@@ -1,6 +1,6 @@
 # IA Writer Mint Noir Mobile
 
-### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/blob/37c32f0b26b547a9de9309f0b787398f2b6a6d61/snippets/dark.css) for the dark theme snippet.
+### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/releases/download/1.0.2/dark.css) for the dark theme snippet.
 ### If you see this on GitHub, [download the theme here!](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile)
 
 ![Desktop](screenshot_desktop.png)
