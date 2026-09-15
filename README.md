@@ -17,7 +17,7 @@
 
 The design carries through notes, file navigation, Properties, Bases, and mobile controls. Compact typography, rounded surfaces, folder shading, and subtle gradients give the workspace a consistent appearance.
 
-Mint Noir is a finished personal project. No further design changes are currently planned. You can install it manually by downloading the files in the Releases page or directly download it download it [here](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile) in Obsidian's community theme directory.
+Mint Noir is a finished personal project. No further design changes are currently planned. You can install it manually by downloading the files in the Releases page or directly download it [here](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile) in Obsidian's community theme directory.
 
 > **Two files for the theme, one snippet for dark mode.** Install `theme.css` and `manifest.json` as the theme. Install `snippets/dark.css` separately as a CSS snippet if you want dark mode or automatic light/dark switching.
 
