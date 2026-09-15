@@ -1,6 +1,7 @@
 # IA Writer Mint Noir Mobile
 
 ### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/blob/37c32f0b26b547a9de9309f0b787398f2b6a6d61/snippets/dark.css) for the dark theme snippet.
+### If you see this on GitHub, [download the theme here!](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile)
 
 ![Desktop](screenshot_desktop.png)
 
@@ -16,17 +17,17 @@
 
 The design carries through notes, file navigation, Properties, Bases, and mobile controls. Compact typography, rounded surfaces, folder shading, and subtle gradients give the workspace a consistent appearance.
 
-Mint Noir is a finished personal project. No further design changes are currently planned. Installation is manual; the theme is not currently listed in Obsidian's community theme directory.
+Mint Noir is a finished personal project. No further design changes are currently planned. You can install it manually by downloading the files in the Releases page or directly download it download it [here](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile) in Obsidian's community theme directory.
 
-> **Two files for the theme, one snippet for dark mode.** Install `theme.css` and `manifest.json` as the theme. Install `snippets\dark.css` separately as a CSS snippet if you want dark mode or automatic light/dark switching.
+> **Two files for the theme, one snippet for dark mode.** Install `theme.css` and `manifest.json` as the theme. Install `snippets/dark.css` separately as a CSS snippet if you want dark mode or automatic light/dark switching.
 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Installation](#installation)
 - [Features](#features)
 - [Markdown Showcase](#markdown-showcase)
 - [Requirements](#requirements)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
@@ -34,6 +35,48 @@ Mint Noir is a finished personal project. No further design changes are currentl
 - [Project Status and Feedback](#project-status-and-feedback)
 - [Credits](#credits)
 - [License](#license)
+
+## Installation
+
+### 1. Get the files
+
+Download or copy [theme.css](theme.css) and [manifest.json](manifest.json). For dark mode, also get [dark.css](snippets/dark.css). On GitHub, download the raw files or download and extract the repository ZIP; do not save the HTML file-preview page as a stylesheet.
+
+### 2. Install the theme
+
+Inside your vault's configuration folder, create `themes/IA Writer Mint Noir Mobile/`. Place **both** `theme.css` and `manifest.json` directly inside that folder.
+
+The folder name must match the name in the manifest: **IA Writer Mint Noir Mobile**. This follows Obsidian's [theme installation structure](https://github.com/obsidianmd/obsidian-developer-docs/blob/main/en/Themes/App%20themes/Build%20a%20theme.md).
+
+### 3. Install the dark-mode snippet
+
+Create a `snippets` folder inside the configuration folder if it does not already exist, then place `dark.css` inside it. The complete setup looks like this:
+
+```text
+Your vault/
+└── .obsidian/
+    ├── themes/
+    │   └── IA Writer Mint Noir Mobile/
+    │       ├── manifest.json
+    │       └── theme.css
+    └── snippets/
+        └── dark.css
+```
+
+`dark.css` belongs in `snippets`, not in the theme folder. It is a companion to Mint Noir, not a standalone theme. You can skip it if you will only use the light color scheme.
+
+### 4. Enable everything in Obsidian
+
+1. Open **Settings → Appearance**.
+2. Select **IA Writer Mint Noir Mobile** from the theme dropdown. Restart Obsidian if the newly installed theme does not appear.
+3. For dark mode, scroll to **CSS snippets**, select **Reload snippets**, and enable **dark** (the file is `dark.css`). See Obsidian's [CSS snippet instructions](https://help.obsidian.md/snippets).
+4. Set **Base color scheme** to **Light**, **Dark**, or **Adapt to system**.
+
+### Installing on a phone or tablet
+
+Use a file manager that can access the vault's configuration folder. Enable hidden-file visibility if `.obsidian` is not shown. If your mobile file manager cannot access that folder, place the files using a computer and sync the theme and snippet folders to the mobile vault.
+
+Make sure your sync setup includes those configuration files, then check the selected theme and snippet toggle on the mobile device. Obsidian documents file-manager and sync approaches in its [mobile snippet guide](https://help.obsidian.md/snippets).
 
 ## Features
 
@@ -78,48 +121,6 @@ Additional CSS targets Extended Pandoc Markdown superscripts and subscripts, Nov
 - **Bases styling:** requires an Obsidian version that includes Bases and the Bases core plugin enabled. Bases is optional for normal notes.
 
 Mobile is the design priority. Desktop selectors are included, but the project does not provide a device-by-device or operating-system compatibility matrix. There is no build step, package manager, required community plugin, or Style Settings configuration panel.
-
-## Installation
-
-### 1. Get the files
-
-Download or copy [theme.css](theme.css) and [manifest.json](manifest.json). For dark mode, also get [dark.css](snippets/dark.css). On GitHub, download the raw files or download and extract the repository ZIP; do not save the HTML file-preview page as a stylesheet.
-
-### 2. Install the theme
-
-Inside your vault's configuration folder, create `themes/IA Writer Mint Noir Mobile/`. Place **both** `theme.css` and `manifest.json` directly inside that folder.
-
-The folder name must match the name in the manifest: **IA Writer Mint Noir Mobile**. This follows Obsidian's [theme installation structure](https://github.com/obsidianmd/obsidian-developer-docs/blob/main/en/Themes/App%20themes/Build%20a%20theme.md).
-
-### 3. Install the dark-mode snippet
-
-Create a `snippets` folder inside the configuration folder if it does not already exist, then place `dark.css` inside it. The complete setup looks like this:
-
-```text
-Your vault/
-└── .obsidian/
-    ├── themes/
-    │   └── IA Writer Mint Noir Mobile/
-    │       ├── manifest.json
-    │       └── theme.css
-    └── snippets/
-        └── dark.css
-```
-
-`dark.css` belongs in `snippets`, not in the theme folder. It is a companion to Mint Noir, not a standalone theme. You can skip it if you will only use the light color scheme.
-
-### 4. Enable everything in Obsidian
-
-1. Open **Settings → Appearance**.
-2. Select **IA Writer Mint Noir Mobile** from the theme dropdown. Restart Obsidian if the newly installed theme does not appear.
-3. For dark mode, scroll to **CSS snippets**, select **Reload snippets**, and enable **dark** (the file is `dark.css`). See Obsidian's [CSS snippet instructions](https://help.obsidian.md/snippets).
-4. Set **Base color scheme** to **Light**, **Dark**, or **Adapt to system**.
-
-### Installing on a phone or tablet
-
-Use a file manager that can access the vault's configuration folder. Enable hidden-file visibility if `.obsidian` is not shown. If your mobile file manager cannot access that folder, place the files using a computer and sync the theme and snippet folders to the mobile vault.
-
-Make sure your sync setup includes those configuration files, then check the selected theme and snippet toggle on the mobile device. Obsidian documents file-manager and sync approaches in its [mobile snippet guide](https://help.obsidian.md/snippets).
 
 ## Usage
 
