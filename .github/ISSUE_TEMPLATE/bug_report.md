@@ -1,9 +1,11 @@
 ---
 name: Bug Report
-about: Create a report to help us improve
+about: Create a report to help improve the theme!
 title: "[BUG] - Brief description of bug"
-labels: 'bug, needs-triage'
+labels: bug
 assignees: ''
+type: Bug
+
 ---
 
 **Describe the bug**
