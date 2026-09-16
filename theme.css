@@ -1965,3 +1965,52 @@ span.suggestion-prefix {
   width: 24px !important;
   height: 24px !important;
 }
+
+/* ----------------------------------------
+   Codeblock Languages
+---------------------------------------- */
+
+/* Codeblock String */
+.cm-string,
+span.cm-hmd-codeblock.cm-string,
+.cm-hmd-codeblock.cm-string,
+.theme-dark .cm-string,
+.theme-dark span.cm-hmd-codeblock.cm-string,
+.theme-dark .cm-hmd-codeblock.cm-string{
+  color: #008214;
+}
+
+/* Codeblock Classes */
+.cm-qualifier,
+span.cm-hmd-codeblock.cm-qualifier,
+.cm-hmd-codeblock.cm-qualifier ,
+.theme-dark .cm-qualifier,
+.theme-dark span.cm-hmd-codeblock.cm-qualifier,
+.theme-dark .cm-hmd-codeblock.cm-qualifier {
+color: #1500ff;
+}
+
+/* Variables */
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.theme-dark .cm-variable,
+.theme-dark .cm-variable-2,
+.theme-dark .cm-variable-3 {
+color: cyan;
+}
+
+.cm-meta,
+.theme-dark .cm-meta {
+  color: grey;
+}
+
+.theme-dark .cm-builtin,
+.theme-dark .cm-property,
+.theme-dark .cm-attribute {
+  color: orange;
+}
+
+.theme-dark .cm-keyword {
+  color: red;
+}
