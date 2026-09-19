@@ -2014,3 +2014,107 @@ color: cyan;
 .theme-dark .cm-keyword {
   color: red;
 }
+
+
+/* ----------------------------------------
+   DARK MODE SNIPPET WARNING
+---------------------------------------- */
+
+body.theme-dark::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999998;
+
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+
+  pointer-events: none;
+
+  animation:
+    mint-noir-dark-backdrop-dismiss 0.5s ease 7s forwards;
+}
+
+body.theme-dark::after {
+  content:
+    "⚠ DARK MODE REQUIRES AN ADDITIONAL CSS SNIPPET ⚠\A\A"
+    "You are currently using IA Writer Mint Noir in dark mode, but the required dark theme snippet is not enabled.\A\A"
+    "The theme will NOT display correctly without it.\A\A"
+    "Download the dark mode snippet from the IA Writer Mint Noir GitHub repository.\A\A"
+    "Then enable it under Settings → Appearance → CSS snippets.\A\A"
+    "This warning will close automatically.";
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 999999;
+
+  width: min(520px, calc(100vw - 32px));
+  box-sizing: border-box;
+  padding: 28px;
+
+  background: #111;
+  color: #fff;
+
+  border: 3px solid #ff4d4d;
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.85),
+    0 0 32px rgba(255, 77, 77, 0.4);
+
+  font-family: 'iawriterduos-regular', monospace;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  text-align: center;
+  white-space: pre-line;
+
+  pointer-events: none;
+
+  animation:
+    mint-noir-dark-warning-pulse 1.6s ease-in-out 3,
+    mint-noir-dark-warning-dismiss 0.5s ease 7s forwards;
+}
+
+@keyframes mint-noir-dark-warning-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 20px 70px rgba(0, 0, 0, 0.85),
+      0 0 18px rgba(255, 77, 77, 0.25);
+  }
+
+  50% {
+    box-shadow:
+      0 20px 70px rgba(0, 0, 0, 0.85),
+      0 0 42px rgba(255, 77, 77, 0.75);
+  }
+}
+
+@keyframes mint-noir-dark-warning-dismiss {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes mint-noir-dark-backdrop-dismiss {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -628,3 +628,56 @@ body.theme-dark.is-mobile ::-webkit-scrollbar-thumb:hover {
 .theme-dark .cm-hashtag-inner{
   color: var(--text-accent);
 }
+
+/* ------------------------------
+EMPTY STATE
+--------------------------------*/
+
+.theme-dark .empty-state-action {
+    cursor: var(--cursor);
+    line-height: 36px;
+    color: var(--deep-teal);
+    background-color: var(--mint-base-darker);
+    border: var(--deep-teal);
+    border-style: solid;
+    border-radius: 90px;
+    margin: 5px;
+    padding: 5px;
+    border-width: thin;
+}
+
+.theme-dark .empty-state-action:active {
+    color: #062d34;
+    background-color: var(--deep-teal);
+}
+
+/* Empty tab whole leaf background */
+.theme-dark .workspace-leaf-content[data-type="empty"] {
+    background: linear-gradient(
+        180deg,
+        #16363a 0%,
+        #204a4e 22%,
+        #0e4657 58%,
+        #062d34 100%
+    ) !important;
+}
+
+/* Let header show the shared background */
+.theme-dark .workspace-leaf-content[data-type="empty"] .view-header {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Let content show the shared background */
+.theme-dark .workspace-leaf-content[data-type="empty"] .view-content {
+    background: transparent !important;
+}
+
+/* Hide the base theme's missing-dark-snippet warning */
+body.theme-dark::before,
+body.theme-dark::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
