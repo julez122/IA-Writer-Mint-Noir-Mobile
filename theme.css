@@ -2118,3 +2118,9 @@ body.theme-dark::after {
     visibility: hidden;
   }
 }
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-name, .menu-item {
+    font-family: 'iawriterduos-regular';
+    font-size: 12px;
+    letter-spacing: 0.04em;
+}
