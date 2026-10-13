@@ -2124,3 +2124,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     font-size: 12px;
     letter-spacing: 0.04em;
 }
+
+body:not(.is-mobile) span.cm-header.cm-header.cm-inline-code {
+    font-weight: 500;
+}
