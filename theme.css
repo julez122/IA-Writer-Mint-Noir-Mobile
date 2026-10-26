@@ -2128,3 +2128,44 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 body:not(.is-mobile) span.cm-header.cm-header.cm-inline-code {
     font-weight: 500;
 }
+
+/* Stop footnotes in headers from inheriting their size */
+.cm-s-obsidian .cm-header-2.cm-footref {
+  font-size: 12px !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Removes the margin above the empty space pill row */
+.is-mobile .empty-state-container > .empty-state-action-list {
+    margin-top: 0;
+}
+
+/* Resizes the empty space pill row */
+.is-mobile .text-icon-button.mod-pill {
+    padding: 0px 10px;
+}
+
+/* More space between the pills */
+.empty-state-action-list {
+    gap: 10px;
+}
+
+/* Smaller size for text in pills and icons in pills and color them in deep-teal */
+.empty-state-action-list > .text-icon-button.mod-pill {
+    font-size: 12px;
+    color: var(--deep-teal);
+    border: 1px solid var(--deep-teal);
+}
+
+div.empty-state-action-list > div > span.text-button-icon {
+    width: 12px;
+    height: 12px;
+}
+
+/* Removes the dark teal circular background of actions from the mobile navbar */
+.mobile-navbar-action .clickable-icon, 
+.mobile-navbar-action button {
+    background: transparent;
+}
+    
