@@ -1,9 +1,10 @@
 ---
 name: Bug Report
-about: Create a report to help improve the theme!
+about: Create a report to help improve the theme! Bugs related to third party plugins
+  will be ignored.
 title: "[BUG] - Brief description of bug"
 labels: bug
-assignees: ''
+assignees: julez122
 type: Bug
 
 ---
