@@ -1367,6 +1367,7 @@ BASES CARDS TEXT
 .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
 .workspace-leaf-content[data-type="markdown"] .markdown-rendered :not(pre) > code {
   font-family: var(--font-monospace) !important;
+  padding-right: 20px;
 }
 
  /* ----------------------------------------
@@ -1977,7 +1978,7 @@ span.cm-hmd-codeblock.cm-string,
 .theme-dark .cm-string,
 .theme-dark span.cm-hmd-codeblock.cm-string,
 .theme-dark .cm-hmd-codeblock.cm-string{
-  color: #008214;
+  color: #195d06;
 }
 
 /* Codeblock Classes */
@@ -1997,7 +1998,7 @@ color: #1500ff;
 .theme-dark .cm-variable,
 .theme-dark .cm-variable-2,
 .theme-dark .cm-variable-3 {
-color: cyan;
+  color: #1badad
 }
 
 .cm-meta,
@@ -2008,7 +2009,7 @@ color: cyan;
 .theme-dark .cm-builtin,
 .theme-dark .cm-property,
 .theme-dark .cm-attribute {
-  color: orange;
+  color: #977404;
 }
 
 .theme-dark .cm-keyword {
@@ -2168,4 +2169,105 @@ div.empty-state-action-list > div > span.text-button-icon {
 .mobile-navbar-action button {
     background: transparent;
 }
-    
+
+
+/* Remove the blurry filter from the floating header */
+.is-phone .view-header .view-action {
+    background: var(--mint-base);
+    backdrop-filter: none !important;
+}
+
+.is-mobile.is-floating-nav .mod-raised {
+    backdrop-filter: none;
+}
+
+/* Reduce the sizes of the mobile navbar and header bar */
+.mobile-navbar-actions {
+    --icon-size: 20px;
+}
+
+.view-header svg {
+    width: 15px;
+}
+
+div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
+    width: 15px;
+}
+
+/* Resize the left and right floating header bar and give them a border */
+.is-phone .view-header .view-actions {
+    height: 36px;
+    /* border: 1px solid var(--deep-teal) !important; */
+    margin-top: 10px;
+    border: 1px solid rgba(14, 70, 87, 0.26) !important;
+}
+
+.is-phone .view-header .view-header-left .view-action {
+    height: 36px;
+    width: 36px;
+    /* transform: translateY(-5px); */
+    margin-top: 10px;
+    border: 1px solid rgba(14, 70, 87, 0.26) !important;
+}
+
+/* Remove the unnecessary blank space between floating nav and inline-title */
+.is-mobile .iconic-title-wrapper > .iconic-icon {
+    padding-top: 0px;
+}
+
+.is-mobile .inline-title {
+    padding-top: 0px;
+}
+
+/* Resize the mobile bottom navbar and give it a subtle border */
+.mobile-navbar {
+    height: 40px;
+    border: 1px solid rgba(14, 70, 87, 0.26) !important;
+}
+
+/* Add more space between inline title and document */
+.iconic-title-wrapper {
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid; */
+    /* padding-bottom: 10px; */
+    /* font-style: italic; */
+}
+
+/* Give indentation lines only in code blocks opacity */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-indent::before {
+    border-inline-start-color: var(--deep-teal) !important;
+    border: 1px solid;
+    opacity: 0.1;
+}
+
+/* A border for the Settings Cog Icon */
+.clickable-icon.workspace-drawer-header-icon.mod-raised.mod-settings.iconic-icon {
+    border: 1px solid rgb(14 70 87 / 26%) !important;
+}
+
+/* Remove the padding above headers */
+.cm-s-obsidian .cm-line.HyperMD-header {
+    padding-top: 0px;
+}
+
+/* Revert the new changes of the settings menu */
+.is-phone .modal.mod-settings .vertical-tab-nav-item-title {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.setting-item-name {
+    font-size: 14px;
+}
+
+/* Make the X icon in the Settings modal compact */
+.modal-header-button.mod-raised.clickable-icon {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid rgb(14 70 87 / 26%) !important;
+}
+
+div.modal-header-button.mod-raised.clickable-icon > svg {
+    width: 12px;
+    height: 12px;
+}
