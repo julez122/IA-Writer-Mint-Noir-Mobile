@@ -681,3 +681,28 @@ body.theme-dark::after {
   content: none !important;
   animation: none !important;
 }
+
+.theme-dark.view-header .view-action {
+    background: #395f6b;
+}
+
+.theme-dark .view-header .view-actions {
+  border: 1px solid rgba(144, 209, 199, 0.7) !important;
+}
+
+.theme-dark .view-header-left .view-action {
+    background: #3f6370 !important;
+    border: 1px solid rgba(144, 209, 199, 0.7) !important;
+}
+
+.theme-dark .mobile-navbar {
+  border: 1px solid rgba(144, 209, 199, 0.7) !important;
+}
+
+.theme-dark .clickable-icon.workspace-drawer-header-icon.mod-raised.mod-settings.iconic-icon {
+   border: 1px solid rgba(144, 209, 199, 0.7);
+}
+
+.theme-dark .modal-header-button.mod-raised.clickable-icon {
+  border: 1px solid rgba(144, 209, 199, 0.7);
+}

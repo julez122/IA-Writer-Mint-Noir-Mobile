@@ -341,7 +341,7 @@ blockquote {
 .side-dock-ribbon .side-dock-ribbon-action,
 .nav-action-button,
 .view-action {
-  background: var(--deep-teal-soft);
+  /* background: var(--deep-teal-soft); */
   border-radius: 10px;
 }
 
@@ -2173,7 +2173,7 @@ div.empty-state-action-list > div > span.text-button-icon {
 
 /* Remove the blurry filter from the floating header */
 .is-phone .view-header .view-action {
-    background: var(--mint-base);
+   /*  background: transparent; */
     backdrop-filter: none !important;
 }
 
@@ -2199,6 +2199,9 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
     height: 36px;
     /* border: 1px solid var(--deep-teal) !important; */
     margin-top: 10px;
+}
+
+ .is-phone .view-header .view-actions {
     border: 1px solid rgba(14, 70, 87, 0.26) !important;
 }
 
@@ -2207,7 +2210,10 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
     width: 36px;
     /* transform: translateY(-5px); */
     margin-top: 10px;
-    border: 1px solid rgba(14, 70, 87, 0.26) !important;
+}
+
+ .is-phone .view-header .view-header-left .view-action {
+    border: 1px solid rgba(14, 70, 87, 0.26);
 }
 
 /* Remove the unnecessary blank space between floating nav and inline-title */
@@ -2222,6 +2228,9 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
 /* Resize the mobile bottom navbar and give it a subtle border */
 .mobile-navbar {
     height: 40px;
+}
+
+.theme-light .mobile-navbar {
     border: 1px solid rgba(14, 70, 87, 0.26) !important;
 }
 
@@ -2241,7 +2250,7 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
 }
 
 /* A border for the Settings Cog Icon */
-.clickable-icon.workspace-drawer-header-icon.mod-raised.mod-settings.iconic-icon {
+.theme-light .clickable-icon.workspace-drawer-header-icon.mod-raised.mod-settings.iconic-icon {
     border: 1px solid rgb(14 70 87 / 26%) !important;
 }
 
@@ -2261,10 +2270,13 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
 }
 
 /* Make the X icon in the Settings modal compact */
+.theme-light .modal-header-button.mod-raised.clickable-icon {
+    border: 1px solid rgb(14 70 87 / 26%) !important;
+}
+
 .modal-header-button.mod-raised.clickable-icon {
     width: fit-content;
     height: fit-content;
-    border: 1px solid rgb(14 70 87 / 26%) !important;
 }
 
 div.modal-header-button.mod-raised.clickable-icon > svg {
