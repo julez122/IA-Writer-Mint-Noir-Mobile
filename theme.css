@@ -580,7 +580,7 @@ code,
 .markdown-rendered code,
 .cm-inline-code,
 .markdown-source-view.mod-cm6 .cm-inline-code {
-  background: var(--deep-teal-soft) !important;
+  background: #5f9f9a !important;
   color: var(--text-black) !important;
   border: 1px solid rgba(14, 70, 87, 0.16) !important;
   border-radius: 8px !important;
@@ -603,7 +603,7 @@ pre code,
 pre,
 .markdown-rendered pre,
 .markdown-rendered pre[class*="language-"] {
-  background: var(--deep-teal-soft) !important;
+  background: #5f9f9a !important;
   color: var(--text-black) !important;
   border: 1px solid rgba(14, 70, 87, 0.20) !important;
   border-radius: 16px !important;
@@ -613,7 +613,7 @@ pre,
 
 /* ---------- Live Preview / editor code blocks ---------- */
 .markdown-source-view.mod-cm6 .HyperMD-codeblock, .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock, .markdown-source-view.mod-cm6 .cm-preview-code-block, .markdown-source-view.mod-cm6 .cm-preview-code-block, .cm-s-obsidian .HyperMD-codeblock, .cm-s-obsidian .cm-line.HyperMD-codeblock {
-    background: #7bbab5;
+    background: #5f9f9a;
     color: var(--text-black);
     box-shadow: none !important;
 }
@@ -1978,7 +1978,7 @@ span.cm-hmd-codeblock.cm-string,
 .theme-dark .cm-string,
 .theme-dark span.cm-hmd-codeblock.cm-string,
 .theme-dark .cm-hmd-codeblock.cm-string{
-  color: #195d06;
+  color: #abd58e;
 }
 
 /* Codeblock Classes */
@@ -1988,17 +1988,20 @@ span.cm-hmd-codeblock.cm-qualifier,
 .theme-dark .cm-qualifier,
 .theme-dark span.cm-hmd-codeblock.cm-qualifier,
 .theme-dark .cm-hmd-codeblock.cm-qualifier {
-color: #1500ff;
+color: #abd58e;
 }
 
 /* Variables */
-.cm-variable,
 .cm-variable-2,
 .cm-variable-3,
-.theme-dark .cm-variable,
 .theme-dark .cm-variable-2,
 .theme-dark .cm-variable-3 {
-  color: #1badad
+  color: #53ada3;
+}
+
+.cm-variable,
+.theme-dark .cm-variable {
+  color: #db7c84;
 }
 
 .cm-meta,
@@ -2008,14 +2011,38 @@ color: #1500ff;
 
 .theme-dark .cm-builtin,
 .theme-dark .cm-property,
-.theme-dark .cm-attribute {
-  color: #977404;
+.theme-dark .cm-attribute,
+.cm-builtin,
+.cm-property,
+.cm-attribute {
+  color: #deac0a;
 }
 
-.theme-dark .cm-keyword {
-  color: red;
+.theme-dark .cm-keyword,
+.cm-keyword {
+  color: #89bcff;
 }
 
+.cm-s-obsidian .cm-hmd-frontmatter.cm-atom, 
+.cm-s-obsidian .cm-templater-command.cm-atom, 
+.cm-s-obsidian .cm-math.cm-atom, 
+.cm-s-obsidian .HyperMD-codeblock .cm-atom, 
+.markdown-preview-view pre.cm-s-obsidian .cm-atom,
+.theme-dark .markdown-preview-view pre.cm-s-obsidian .cm-atom,
+.theme-dark .cm-s-obsidian .cm-atom,
+.theme-dark .cm-atom {
+    color: #da904b;
+}
+
+span.cm-def,
+.theme-dark span.cm-def {
+    color: #e8e28b;
+}
+
+.cm-operator,
+.theme-dark .cm-operator {
+    color: #c9484d;
+}
 
 /* ----------------------------------------
    DARK MODE SNIPPET WARNING
