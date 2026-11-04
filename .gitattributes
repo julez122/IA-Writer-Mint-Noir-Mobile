@@ -1,0 +1,6 @@
+# Normalize text and use LF on every machine
+* text=auto eol=lf
+
+# Windows batch scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
