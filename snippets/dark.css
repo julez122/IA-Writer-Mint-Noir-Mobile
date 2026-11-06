@@ -113,6 +113,9 @@
 .theme-dark button.copy-code-button {
   background: var(--background-secondary-alt) !important;
   border: 1px solid color-mix(in srgb, var(--deep-teal) 30%, var(--mint-base) 70%) !important;
+  padding: 1px 3px;
+  height: 53%;
+  width: 9% !important;
 }
 
 .theme-dark .copy-code-button svg,
@@ -705,4 +708,26 @@ body.theme-dark::after {
 
 .theme-dark .modal-header-button.mod-raised.clickable-icon {
   border: 1px solid rgba(144, 209, 199, 0.7);
+}
+
+/* Give the desktop dock actions a border and rounded corners */
+.theme-dark .side-dock-actions {
+    border: 1px solid rgba(144, 209, 199, 0.7) !important;
+    border-radius: 9px;
+    padding: inherit;
+}
+
+.theme-dark .mobile-toolbar-options-list-container.mod-raised {
+    border: 1px solid rgba(144, 209, 199, 0.7) !important;
+}
+
+/* Callout note code background */
+.theme-dark div.cm-embed-block.cm-callout > div.markdown-rendered.show-indentation-guide > div > div.callout-content.ab-note > p > code {
+    background-color: var(--deep-teal-soft) !important;
+}
+
+/* Reading View code background */
+.theme-dark pre,
+.theme-dark code {
+    background-color: var(--deep-teal-soft) !important;
 }

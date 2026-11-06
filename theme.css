@@ -622,15 +622,19 @@ pre,
 .copy-code-button,
 .markdown-rendered .copy-code-button,
 button.copy-code-button {
-  background: color-mix(in srgb, var(--mint-base) 78%, white 22%) !important;
+  background: #5f9f9a !important;
   color: var(--deep-teal) !important;
   border: 1px solid rgba(14, 70, 87, 0.18) !important;
   box-shadow: none !important;
+  padding: 1px 3px !important;
+  height: 53% !important;
+  width: 9% !important;
 }
 
 .copy-code-button svg,
 button.copy-code-button svg {
   stroke: var(--deep-teal) !important;
+   width: 15px !important;
   }
   
  /* ----------------------------------------
@@ -1600,14 +1604,21 @@ h6:hover .plugin-copy-section-button.active:hover {
     color: var(--deep-teal);
 }
 
-.inline-title .plugin-copy-section-buttons, .HyperMD-header .plugin-copy-section-buttons, h1 .plugin-copy-section-buttons, h2 .plugin-copy-section-buttons, h3 .plugin-copy-section-buttons, h4 .plugin-copy-section-buttons, h5 .plugin-copy-section-buttons, h6 .plugin-copy-section-buttons {
+.inline-title .plugin-copy-section-buttons, .HyperMD-header .plugin-copy-section-buttons, h1 .plugin-copy-section-buttons, h2 .plugin-copy-section-buttons, h3 .plugin-copy-section-buttons, h4 .plugin-copy-section-buttons, h5 .plugin-copy-section-buttons, h6 .plugin-copy-section-buttons, .plugin-copy-section-buttons {
     background-color: transparent;
-  color: var(--deep-teal-soft);
+    color: var(--deep-teal-soft);
+    margin: calc(-1 * var(--size-2-3)) 0 calc(-1 * var(--size-2-3)) 0px !important;
+    padding: var(--size-2-3) 5px !important;
 }
 
 .inline-title:hover .plugin-copy-section-button:active, .HyperMD-header:hover .plugin-copy-section-button:active, .HyperMD-header:hover .plugin-copy-section-button:hover:active, h1:hover .plugin-copy-section-button.active, h1:hover .plugin-copy-section-button.active:hover, h2:hover .plugin-copy-section-button.active, h2:hover .plugin-copy-section-button.active:hover, h3:hover .plugin-copy-section-button.active, h3:hover .plugin-copy-section-button.active:hover, h4:hover .plugin-copy-section-button.active, h4:hover .plugin-copy-section-button.active:hover, h5:hover .plugin-copy-section-button.active, h5:hover .plugin-copy-section-button.active:hover, h6:hover .plugin-copy-section-button.active, h6:hover .plugin-copy-section-button.active:hover {
-   background-color: transparent;
+  background-color: transparent;
   color: var(--deep-teal);
+}
+
+span.plugin-copy-section-buttons > span > span > svg {
+    height: 15px !important;
+    width: 15px !important;
 }
 
 /* ----------------------------------------------
@@ -1716,6 +1727,11 @@ CALLOUT TRANSPARENCY FIX
    DO NOT TOUCH UNLESS 
    YOU WANT TO SUFFER
 ---------------------------------------- */
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-table-widget {
+    --table-drag-handle-size: 15px !important;
+    padding: 12px !important;
+}
 
 /* Unclip the CodeMirror line only */
 .markdown-source-view.mod-cm6 .cm-line:has(.cm-table-widget) {
@@ -2243,6 +2259,13 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
     border: 1px solid rgba(14, 70, 87, 0.26);
 }
 
+/* .view-actions.mod-raised, .view-header-left {
+    border: 1px solid rgba(14, 70, 87, 0.26);
+    border-radius: 999px;
+    height: fit-content;
+    margin-top: 5px;
+} */
+
 /* Remove the unnecessary blank space between floating nav and inline-title */
 .is-mobile .iconic-title-wrapper > .iconic-icon {
     padding-top: 0px;
@@ -2309,4 +2332,47 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
 div.modal-header-button.mod-raised.clickable-icon > svg {
     width: 12px;
     height: 12px;
+}
+
+/* Give the desktop dock actions a border and rounded corners */
+.side-dock-actions {
+    border: 1px solid rgba(14, 70, 87, 0.26);
+    border-radius: 9px;
+    padding: inherit;
+}
+
+/* Mobile toolbar styling */
+.mobile-toolbar-options-list {
+    height: var(--touch-size-s) !important;
+}
+
+.mobile-toolbar-options-container {
+    --icon-size: var(--icon-s) !important;
+    --icon-stroke: var(--icon-s-stroke-width) !important;
+}
+
+.mobile-toolbar-options-list-container.mod-raised {
+    border: 1px solid rgba(14, 70, 87, 0.26) !important;
+}
+
+.mobile-toolbar-option {
+    color: var(--deep-teal) !important;
+}
+
+/* Icon size of the copy code button in live preview mode */
+span.code-block-flair > svg {
+    width: 15px !important;
+}
+
+/* Notifications and Tooltips */
+.is-phone .notice,
+.tooltip {
+    background-color: var(--deep-teal-soft);
+    color: var(--deep-teal);
+}
+
+/* Code block flair styling */
+.markdown-source-view.mod-cm6 .code-block-flair {
+    font-size: 11px !important;
+    opacity: 0.7;
 }

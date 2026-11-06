@@ -2,7 +2,8 @@
 
 <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Frefs%2Fheads%2Fmain%2Fmanifest.json&query=%24.version&style=for-the-badge&logo=obsidian&logoColor=%237C3AED&label=Version&labelColor=%230e4657&color=%2390d1c7&link=https%3A%2F%2Fgithub.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Freleases%2Flatest" width="15%" height="15%">
 
-### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/releases/download/1.1.0/dark.css) for the dark theme snippet.
+### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/releases/download/1.1.1/dark.css) for the dark theme snippet.
+
 ### If you see this on GitHub, [download the theme here!](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile)
 
 ![Desktop](screenshot_desktop.png)
