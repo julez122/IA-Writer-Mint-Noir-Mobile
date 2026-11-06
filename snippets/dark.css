@@ -834,7 +834,7 @@ body.theme-dark::after {
   background: #395f6b;
 }
 
-.theme-dark .view-header .view-actions {
+.is-mobile.theme-dark .view-header .view-actions {
   border: 1px solid rgba(144, 209, 199, 0.7) !important;
 }
 
