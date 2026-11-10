@@ -114,6 +114,8 @@
 
   --text-highlight-bg: rgba(144, 209, 199, 0.7);
   --text-highlight-bg-active: rgba(144, 209, 199, 0.9);
+
+   --menu-border-color: var(--deep-teal-soft);
 }
 
 .theme-dark .markdown-rendered hr {
@@ -822,13 +824,20 @@ EMPTY STATE
   background: transparent !important;
 }
 
-/* Hide the base theme's missing-dark-snippet warning */
+/* -----------------------------------------------------------------------------------
+   Hide the base theme's missing-dark-snippet warning
+----------------------------------------------------------------------------------- */
+
 body.theme-dark::before,
 body.theme-dark::after {
   display: none !important;
   content: none !important;
   animation: none !important;
 }
+
+/* -----------------------------------------------------------------------------------
+   View Header and Mobile Navbar Styling
+----------------------------------------------------------------------------------- */
 
 .theme-dark.view-header .view-action {
   background: #395f6b;
@@ -843,18 +852,27 @@ body.theme-dark::after {
   border: 1px solid rgba(144, 209, 199, 0.7) !important;
 }
 
+body:not(.is-mobile, .is-phone).theme-dark .view-header-left,
+body:not(.is-mobile, .is-phone).theme-dark .view-actions {
+  border: 1px solid rgba(144, 209, 199, 0.7) !important;
+}
+
 .theme-dark .mobile-navbar {
   border: 1px solid rgba(144, 209, 199, 0.7) !important;
 }
 
 .theme-dark
   .clickable-icon.workspace-drawer-header-icon.mod-raised.mod-settings.iconic-icon {
-  border: 1px solid rgba(144, 209, 199, 0.7);
+  border: none;
+  background: var(--background-secondary);
+  box-shadow: none;
 }
 
 .theme-dark .modal-header-button.mod-raised.clickable-icon {
   border: 1px solid rgba(144, 209, 199, 0.7);
 }
+
+/* ----------------------------------------------------------------------------------- */
 
 /* Give the desktop dock actions a border and rounded corners */
 .theme-dark .side-dock-actions {
@@ -863,6 +881,7 @@ body.theme-dark::after {
   padding: inherit;
 }
 
+/* Mobile toolbar options container border */
 .theme-dark .mobile-toolbar-options-list-container.mod-raised {
   border: 1px solid rgba(144, 209, 199, 0.7) !important;
 }
@@ -882,4 +901,41 @@ body.theme-dark::after {
 .theme-dark pre,
 .theme-dark code {
   background-color: var(--deep-teal-soft) !important;
+}
+
+/* Make document block ID's less prominent */
+.theme-dark .cm-s-obsidian span.cm-blockid {
+  color: color-mix(in srgb, var(--text-muted) 11%, transparent);
+}
+
+/* Give the desktop workspace sidedock vault profile, ribbon, and nav header a background color in dark theme */
+body:not(.is-mobile).theme-dark
+  .workspace-split.mod-primary-split
+  .workspace-sidedock-vault-profile,
+.theme-dark .workspace-ribbon,
+body:not(.is-mobile).theme-dark .nav-header {
+  background-color: var(--mint-base-darker);
+}
+
+/* Windows native button row (Minimize, Maximize, Close) */
+.theme-dark .titlebar-button {
+  color: #81beb7;
+}
+
+/* Desktop status bar */
+.status-bar {
+  color: var(--icon-color);
+}
+
+/* Active line highlight in the editor */
+.theme-dark .cm-content .cm-active {
+  background-color: rgba(144, 209, 199, 0.05);
+  border-left: 4px solid rgb(17, 84, 105);
+  border-radius: 0px;
+}
+
+/* Match the Desktop side panel color with the workspace sidedock and ribbon */
+body:not(.is-mobile).theme-dark .workspace-split.mod-primary-split .view-content, 
+body:not(.is-mobile).theme-dark .workspace-split.mod-secondary-split .view-content {
+  background-color: var(--mint-base-darker);
 }

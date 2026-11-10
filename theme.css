@@ -169,6 +169,8 @@ but below in .theme-light */
 
   --scrollbar-bg: #91ebd5;
   --scrollbar-thumb-bg: #91ebd5;
+
+  --menu-border-color: var(--deep-teal-soft);
 }
 
 /* ----------------------------------------
@@ -336,7 +338,7 @@ blockquote {
   background: var(--deep-teal-soft) !important;
   border-left: 4px solid var(--deep-teal) !important;
   box-shadow: inset 0 0 0 1px rgba(14, 70, 87, 0.12) !important;
-  border-radius: 0 14px 14px 0 !important;
+  border-radius: 0 5px 5px 0 !important;
   padding: 0.55em 0.9em 0.55em 1em !important;
   margin: 0.9em 0 !important;
 }
@@ -352,10 +354,10 @@ blockquote {
   box-shadow:
     inset 5px 0 0 var(--deep-teal),
     inset 0 0 0 1px rgba(14, 70, 87, 0.12) !important;
-  border-radius: 0 14px 14px 0 !important;
+  border-radius: 0 5px 5px 0 !important;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin: 0.35em 0 !important;
+  margin: 0.15em 0 !important;
 }
 
 /* Keep the > marker visible so blockquotes still behave normally */
@@ -2012,19 +2014,15 @@ CALLOUT TRANSPARENCY FIX
   .table-col-drag-handle {
   --icon-size: var(--icon-s);
   --icon-stroke: var(--icon-s-stroke-width);
-
   position: absolute !important;
   display: none !important;
   align-items: center !important;
   justify-content: center !important;
-
   cursor: grab !important;
   touch-action: none !important;
   pointer-events: auto !important;
-
   background-color: var(--table-drag-handle-background) !important;
   color: var(--table-drag-handle-color) !important;
-
   opacity: 0 !important;
   z-index: 99999 !important;
 }
@@ -2051,12 +2049,10 @@ CALLOUT TRANSPARENCY FIX
   .table-row-drag-handle {
   top: 0 !important;
   inset-inline-end: 100% !important;
-
   width: calc(
     var(--table-drag-handle-size) - var(--table-selection-border-width)
   ) !important;
   height: 100% !important;
-
   border-start-start-radius: var(--radius-s) !important;
   border-end-start-radius: var(--radius-s) !important;
 }
@@ -2067,12 +2063,10 @@ CALLOUT TRANSPARENCY FIX
   .cm-table-widget
   .table-col-drag-handle {
   inset-block-end: 100% !important;
-
   width: 100% !important;
   height: calc(
     var(--table-drag-handle-size) - var(--table-selection-border-width)
   ) !important;
-
   border-start-start-radius: var(--radius-s) !important;
   border-start-end-radius: var(--radius-s) !important;
 }
@@ -2139,7 +2133,11 @@ body:not(.is-mobile)
 .menu-item {
   font-family: "iawriterduos-regular";
   font-size: 16px;
-  letter-spacing: 0.04em;
+  letter-spacing: normal;
+}
+
+body:not(.is-mobile) .workspace-drawer-header-name-text {
+  color: var(--icon-color);
 }
 
 .workspace-drawer-header-info {
@@ -2327,9 +2325,9 @@ span.cm-def,
   color: #c9484d;
 }
 
-/* ----------------------------------------
+/* -----------------------------------------------------------------------------------
    DARK MODE SNIPPET WARNING
----------------------------------------- */
+----------------------------------------------------------------------------------- */
 
 body.theme-dark::before {
   content: "";
@@ -2428,6 +2426,9 @@ body.theme-dark::after {
   }
 }
 
+/* ----------------------------------------------------------------------------------- */
+
+/* Desktop Vault Selector */
 body:not(.is-mobile)
   .workspace-split.mod-left-split
   .workspace-sidedock-vault-profile
@@ -2438,6 +2439,7 @@ body:not(.is-mobile)
   letter-spacing: 0.04em;
 }
 
+/* Reduce the font weight for inline code in headers on desktop */
 body:not(.is-mobile) span.cm-header.cm-header.cm-inline-code {
   font-weight: 500;
 }
@@ -2448,6 +2450,10 @@ body:not(.is-mobile) span.cm-header.cm-header.cm-inline-code {
   text-decoration: none;
   display: inline-block;
 }
+
+/* -----------------------------------------------------------------------------------
+NEW EMPTY SPACE PILL ROW
+----------------------------------------------------------------------------------- */
 
 /* Removes the margin above the empty space pill row */
 .is-mobile .empty-state-container > .empty-state-action-list {
@@ -2476,6 +2482,10 @@ div.empty-state-action-list > div > span.text-button-icon {
   height: 12px;
 }
 
+/* -----------------------------------------------------------------------------------
+   MOBILE NAVBAR AND FLOATING HEADER
+----------------------------------------------------------------------------------- */
+
 /* Removes the dark teal circular background of actions from the mobile navbar */
 .mobile-navbar-action .clickable-icon,
 .mobile-navbar-action button {
@@ -2497,10 +2507,7 @@ div.empty-state-action-list > div > span.text-button-icon {
   --icon-size: 20px;
 }
 
-.view-header svg {
-  width: 15px;
-}
-
+.view-header svg,
 div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
   width: 15px;
 }
@@ -2527,20 +2534,20 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
   border: 1px solid rgba(14, 70, 87, 0.26);
 }
 
-/* .view-actions.mod-raised, .view-header-left {
+/* This was supposed to style desktop only but also affects mobile */
+/*.view-actions.mod-raised, .view-header-left {
     border: 1px solid rgba(14, 70, 87, 0.26);
     border-radius: 999px;
     height: fit-content;
     margin-top: 5px;
 } */
 
-/* Remove the unnecessary blank space between floating nav and inline-title */
-.is-mobile .iconic-title-wrapper > .iconic-icon {
-  padding-top: 0px;
-}
-
-.is-mobile .inline-title {
-  padding-top: 0px;
+body:not(.is-mobile, .is-phone) .view-header-left,
+body:not(.is-mobile, .is-phone) .view-actions {
+  border: 1px solid rgba(14, 70, 87, 0.26);
+  border-radius: 99px;
+  height: fit-content;
+  margin-top: 5px;
 }
 
 /* Resize the mobile bottom navbar and give it a subtle border */
@@ -2552,6 +2559,19 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
   border: 1px solid rgba(14, 70, 87, 0.26) !important;
 }
 
+/* -----------------------------------------------------------------------------------
+INLINE TITLE
+----------------------------------------------------------------------------------- */
+
+/* Remove the unnecessary blank space between floating nav and inline-title */
+.is-mobile .iconic-title-wrapper > .iconic-icon {
+  padding-top: 0px;
+}
+
+.is-mobile .inline-title {
+  padding-top: 0px;
+}
+
 /* Add more space between inline title and document */
 .iconic-title-wrapper {
   margin-bottom: 10px;
@@ -2560,6 +2580,8 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
   /* font-style: italic; */
 }
 
+/* ----------------------------------------------------------------------------------- */
+
 /* Give indentation lines only in code blocks opacity */
 .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-indent::before {
   border-inline-start-color: var(--deep-teal) !important;
@@ -2567,10 +2589,12 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
   opacity: 0.1;
 }
 
-/* A border for the Settings Cog Icon */
+/* Remove the border for the Settings Cog Icon */
 .theme-light
   .clickable-icon.workspace-drawer-header-icon.mod-raised.mod-settings.iconic-icon {
-  border: 1px solid rgb(14 70 87 / 26%) !important;
+  border: none;
+  background: var(--mint-base);
+  box-shadow: none;
 }
 
 /* Remove the padding above headers */
@@ -2596,11 +2620,24 @@ div.view-header > div.view-actions.mod-raised > button.clickable-icon > svg {
 .modal-header-button.mod-raised.clickable-icon {
   width: fit-content;
   height: fit-content;
+  margin-top: 5px;
 }
 
 div.modal-header-button.mod-raised.clickable-icon > svg {
   width: 12px;
   height: 12px;
+}
+
+/* Make the mobile back button compact to fit the X icon */
+.is-phone .modal .modal-setting-back-button {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 21px;
+}
+
+.is-phone .modal .modal-setting-back-button > svg {
+    width: 12px;
+    height: 12px;
 }
 
 /* Give the desktop dock actions a border and rounded corners */
@@ -2610,7 +2647,10 @@ div.modal-header-button.mod-raised.clickable-icon > svg {
   padding: inherit;
 }
 
-/* Mobile toolbar styling */
+/* -----------------------------------------------------------------------------------
+   MOBILE TOOLBAR STYLING
+----------------------------------------------------------------------------------- */
+
 .mobile-toolbar-options-list {
   height: var(--touch-size-s) !important;
 }
@@ -2628,6 +2668,8 @@ div.modal-header-button.mod-raised.clickable-icon > svg {
   color: var(--deep-teal) !important;
 }
 
+/* ----------------------------------------------------------------------------------- */
+
 /* Icon size of the copy code button in live preview mode */
 span.code-block-flair > svg {
   width: 15px !important;
@@ -2644,4 +2686,97 @@ span.code-block-flair > svg {
 .markdown-source-view.mod-cm6 .code-block-flair {
   font-size: 11px !important;
   opacity: 0.7;
+}
+
+/* "Find and Replace" modal input styling for mobile */
+.is-mobile .document-search input,
+.is-mobile .document-replace input {
+  background: var(--deep-teal-soft);
+  height: 35px !important;
+}
+
+.is-mobile .search-input-container:before {
+  top: calc((35px - var(--search-icon-size)) / 2) !important;
+}
+
+/* Desktop Bases presets overlay */
+.bases-toolbar-items .suggestion-group[data-group="views"],
+.bases-toolbar-items .suggestion-group[data-group="properties"],
+.bases-toolbar-items .suggestion-group[data-group="actions"],
+.bases-toolbar-items .bases-menu-group.mod-actions {
+  color: var(--deep-teal);
+}
+
+/* Make document block ID's less prominent */
+.cm-s-obsidian span.cm-blockid {
+  color: color-mix(in srgb, var(--text-muted) 25%, transparent);
+}
+
+/* Give the desktop workspace sidedock vault profile, ribbon, and nav header a background color in light theme */
+body:not(.is-mobile, .is-phone).theme-light
+  .workspace-split.mod-primary-split
+  .workspace-sidedock-vault-profile,
+.theme-light .workspace-ribbon,
+body:not(.is-mobile).theme-light .nav-header {
+  background-color: #99ddd3;
+}
+
+/* Windows native button row (Minimize, Maximize, Close) */
+.theme-light .titlebar-button {
+  color: var(--deep-teal);
+}
+/* Vault Switcher Icon for desktop */
+body:not(.is-mobile)
+  .workspace-split.mod-primary-split
+  .workspace-sidedock-vault-profile
+  .workspace-drawer-vault-switcher-icon {
+  color: var(--icon-color);
+}
+
+/* -----------------------------------------------------------------------------------
+  Selection
+----------------------------------------------------------------------------------- */
+
+/* Active line highlight in the editor */
+.theme-light .cm-content .cm-active {
+  background-color: rgba(17, 84, 105, 0.05);
+  border-left: 4px solid rgb(109, 195, 181);
+  border-radius: 0px;
+}
+
+/* -----------------------------------------------------------------------------------
+  Desktop Borders
+----------------------------------------------------------------------------------- */
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-primary-split > .workspace-leaf-resize-handle {
+  border-inline-color: var(--mint-base-darker);
+}
+
+.workspace-ribbon {
+  border-inline-end-color: var(--mint-base-darker);
+}
+
+.workspace-tab-header-container {
+  border-color: var(--mint-base-darker);
+}
+
+.workspace-ribbon.mod-primary:before {
+  border-bottom-color: var(--mint-base-darker);
+}
+
+body:not(.is-mobile)
+  .workspace-split.mod-primary-split
+  .workspace-sidedock-vault-profile {
+  border-top-color: var(--mint-base-darker);
+}
+
+/* -----------------------------------------------------------------------------------
+  Desktop Side Panel Background
+----------------------------------------------------------------------------------- */
+
+/* Match the Desktop side panel color with the workspace sidedock and ribbon */
+body:not(.is-mobile).theme-light .workspace-split.mod-primary-split .view-content, 
+body:not(.is-mobile).theme-light .workspace-split.mod-secondary-split .view-content {
+    background-color: #99ddd3;
 }

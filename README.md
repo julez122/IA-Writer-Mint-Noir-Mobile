@@ -1,8 +1,6 @@
 # IA Writer Mint Noir Mobile
 
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Frefs%2Fheads%2Fmain%2Fmanifest.json&query=%24.version&style=for-the-badge&logo=obsidian&logoColor=%237C3AED&label=Version&labelColor=%230e4657&color=%2390d1c7&link=https%3A%2F%2Fgithub.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Freleases%2Flatest" width="15%" height="15%">
-
-### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/releases/download/1.1.1/dark.css) for the dark theme snippet.
+### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/releases/download/1.1.2/dark.css) for the dark theme snippet.
 
 ### If you see this on GitHub, [download the theme here!](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile)
 
@@ -12,7 +10,7 @@
  
 *Soft mint pages, deep teal details, and iA Writer Duospace.*
 
-**Mobile first · Light and dark · By Julia**
+**Mobile first · Light and dark · By Julia · <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Frefs%2Fheads%2Fmain%2Fmanifest.json&query=%24.version&style=for-the-badge&logo=obsidian&logoColor=%237C3AED&label=Version&labelColor=%230e4657&color=%2390d1c7&link=https%3A%2F%2Fgithub.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Freleases%2Flatest">**
 
 ## Overview
 
@@ -20,7 +18,7 @@
 
 The design carries through notes, file navigation, Properties, Bases, and mobile controls. Compact typography, rounded surfaces, folder shading, and subtle gradients give the workspace a consistent appearance.
 
-Mint Noir is a finished personal project. No further design changes are currently planned. You can install it manually by downloading the files in the Releases page or directly download it [here](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile) in Obsidian's community theme directory.
+You can install it manually by downloading the files in the Releases page or directly download it [here](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile) in Obsidian's community theme directory.
 
 > **Two files for the theme, one snippet for dark mode.** Install `theme.css` and `manifest.json` as the theme. Install `snippets/dark.css` separately as a CSS snippet if you want dark mode or automatic light/dark switching.
 
