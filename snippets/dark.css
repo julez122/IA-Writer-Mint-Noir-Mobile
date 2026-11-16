@@ -115,7 +115,7 @@
   --text-highlight-bg: rgba(144, 209, 199, 0.7);
   --text-highlight-bg-active: rgba(144, 209, 199, 0.9);
 
-   --menu-border-color: var(--deep-teal-soft);
+  --menu-border-color: var(--deep-teal-soft);
 }
 
 .theme-dark .markdown-rendered hr {
@@ -935,7 +935,11 @@ body:not(.is-mobile).theme-dark .nav-header {
 }
 
 /* Match the Desktop side panel color with the workspace sidedock and ribbon */
-body:not(.is-mobile).theme-dark .workspace-split.mod-primary-split .view-content, 
-body:not(.is-mobile).theme-dark .workspace-split.mod-secondary-split .view-content {
+body:not(.is-mobile).theme-dark
+  .workspace-split.mod-primary-split
+  .view-content,
+body:not(.is-mobile).theme-dark
+  .workspace-split.mod-secondary-split
+  .view-content {
   background-color: var(--mint-base-darker);
 }

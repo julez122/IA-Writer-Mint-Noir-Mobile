@@ -1,13 +1,13 @@
 # IA Writer Mint Noir Mobile
 
-### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/releases/download/1.1.2/dark.css) for the dark theme snippet.
+### Click [here](https://github.com/julez122/IA-Writer-Mint-Noir-Mobile/releases/download/1.1.3/dark.css) for the dark theme snippet.
 
 ### If you see this on GitHub, [download the theme here!](https://community.obsidian.md/themes/ia-writer-mint-noir-mobile)
 
 ![Desktop](screenshot_desktop.png)
 
 ![Mobile](screenshot.png)
- 
+
 *Soft mint pages, deep teal details, and iA Writer Duospace.*
 
 **Mobile first · Light and dark · By Julia · <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Frefs%2Fheads%2Fmain%2Fmanifest.json&query=%24.version&style=for-the-badge&logo=obsidian&logoColor=%237C3AED&label=Version&labelColor=%230e4657&color=%2390d1c7&link=https%3A%2F%2Fgithub.com%2Fjulez122%2FIA-Writer-Mint-Noir-Mobile%2Freleases%2Flatest">**
@@ -178,7 +178,7 @@ Disable the `dark.css` snippet when switching away from Mint Noir. Snippets rema
 - [theme.css](theme.css) — main theme, embedded font, light palette, shared interface styling, and mobile adjustments.
 - [dark.css](snippets/dark.css) — companion dark-mode snippet, installed separately.
 - [manifest.json](manifest.json) — theme name, version, minimum app version, and author metadata.
-- [theme-showcase.md](docs/theme-showcase.md)  — a ready-to-view theme showcase of the theme you can download to your vault.
+- [theme-showcase.md](docs/theme-showcase.md) — a ready-to-view theme showcase of the theme you can download to your vault.
 - [README.md](README.md) — installation guide, feature reference, and Markdown screenshot sample.
 
 ## Project Status and Feedback
